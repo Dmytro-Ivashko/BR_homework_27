@@ -40,6 +40,8 @@ shoppingList.sort(function(a, b) {
 });
 console.log(shoppingList);
 
+
+
 function addToList () {
     shoppingList.push(
         { product: "as", 
@@ -52,13 +54,18 @@ function addToList () {
 addToList();
 console.log(shoppingList);
 
-function adds() {
-    let addTest = prompt("add");
-    if (addTest === null ) {
-        console.log("false");
-    } else {
-        console.log("add");
-    }
-}
+function adds(i) {
+    let addProduct = prompt("add Product");
+    // let addQty = prompt("add Qty");
+       if (addProduct ==  ) {
+        console.log("+");
+       } else {
+        console.log("-")
+
+       };
+
+};
 
 adds();
+console.log(shoppingList);
+console.log(shoppingList[0]);
