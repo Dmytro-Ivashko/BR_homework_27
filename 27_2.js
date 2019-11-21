@@ -6,3 +6,41 @@
 Подсчет общей суммы покупки;
 Получение самой дорогой покупки в чеке;
 Подсчет средней стоимости одного товара в чеке. */
+
+
+let myCheck = [
+  {
+    element: "banana",
+    price: 125,
+  },
+  {
+    element: "chocolate",
+    price: 58,
+  },
+  {
+    element: "pasta",
+    price: 47,
+  },
+  {
+    element: "watermelon",
+    price: 40,
+  },
+  {
+    element: "salmon",
+    price: 500,
+  },
+  {
+    element: "powder",
+    price: 150,
+  },
+]
+function printCheck() {
+  for (let i = 0; i < myCheck.length; i++) {
+    console.log(`Goods: ${myCheck[i].element} --> ${myCheck[i].price} UAH `)
+  }
+};
+
+console.log("------- Print check ----")
+printCheck();
+
+
