@@ -9,63 +9,34 @@
 
  */
 let shoppingList = [
-    { product: "banana",
-      qty: 5,
-      purchased: true,
-    },
-    { product: "pineapple",
-      qty: 10,
-      purchased: false,
-    },
-    { product: "apple",
-      qty: 3,
-      purchased: true,
-    },
-    { product: "meat",
-      qty: 1,
-      purchased: false,
-    },
-    { product: "bread",
-      qty: 1,
-      purchased: true,
-    },
-    { product: "potato",
-      qty: 5,
-      purchased: true,
-    },
-]
+  { product: "banana", qty: 5, purchased: true },
+  { product: "pineapple", qty: 10, purchased: false },
+  { product: "apple", qty: 3, purchased: true },
+  { product: "meat", qty: 1, purchased: false },
+  { product: "bread", qty: 1, purchased: true },
+  { product: "potato", qty: 5, purchased: true }
+];
 
-shoppingList.sort(function(a, b) { 
-    return b.purchased - a.purchased; 
+shoppingList.sort(function(a, b) {
+  return b.purchased - a.purchased;
 });
 console.log(shoppingList);
 
+function addToList(p, q) {
+  shoppingList.push({ product: p, qty: q, purchased: true });
+}
 
-
-function addToList () {
-    shoppingList.push(
-        { product: "as", 
-         qty: 2,
-         purchased: true,
-        },)
-
-};
-
-addToList();
+function toMyShoppingList() {
+  let addProduct = prompt("add Product");
+  let addQty = parseInt(prompt("add Qty"));
+  const isInShoppingList = element => element.product == addProduct;
+  let i = shoppingList.findIndex(isInShoppingList);
+  if (i > 0) {
+    shoppingList[i].qty += addQty;
+  } else {
+    addToList(addProduct, addQty);
+  }
+}
+toMyShoppingList();
+console.log("--------add-------");
 console.log(shoppingList);
-
-function adds(i) {
-    let addProduct = prompt("add Product");
-    // let addQty = prompt("add Qty");
-       if (addProduct ==  ) {
-        console.log("+");
-       } else {
-        console.log("-")
-
-       };
-
-};
-
-adds();
-console.log(shoppingList);
-console.log(shoppingList[0]);
