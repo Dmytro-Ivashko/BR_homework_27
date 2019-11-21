@@ -39,8 +39,15 @@ function printCheck() {
     console.log(`Goods: ${myCheck[i].element} --> ${myCheck[i].price} UAH `)
   }
 };
+function allSum() {
+  let sum = 0; 
+  for (let i = 0; i < myCheck.length; i++) {
+    sum = sum + myCheck[i].price;
+  }
+  console.log(`-------------- Amount to be paid: ${sum} UAH`);
+};
+
 
 console.log("------- Print check ----")
 printCheck();
-
-
+allSum();
